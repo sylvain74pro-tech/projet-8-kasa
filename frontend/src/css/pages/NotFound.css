@@ -1,0 +1,18 @@
+.not-found {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: clamp(38px, 9.6vw, 139px);
+    padding: 25px 20px clamp(75px, 9.6vw, 139px);
+    color: var(--kasa-red);
+    text-align: center;
+}
+
+.not-found h1 { margin: 0; font-size: clamp(96px, 20vw, 288px); line-height: 1; }
+.not-found p { margin: 0; font-size: clamp(18px, 2.5vw, 36px); font-weight: 500; }
+.not-found a { color: #000; font-size: clamp(14px, 1.25vw, 18px); font-weight: 500; }
+
+@media (max-width: 640px) {
+    .not-found { gap: 90px; padding-top: 65px; padding-bottom: 110px; }
+    .not-found p { max-width: 275px; }
+}

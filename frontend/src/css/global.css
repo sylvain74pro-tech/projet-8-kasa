@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+    --kasa-red: #ff6060;
+    --page-width: min(1240px, calc(100% - 80px));
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+#root { display: flex; flex-direction: column; min-height: 100vh; }
+#root > main { flex: 1; }
+
+@media (max-width: 640px) {
+    :root { --page-width: calc(100% - 40px); }
+}

@@ -1,0 +1,13 @@
+.kasa-banner {
+    display: grid;
+    place-items: center;
+    min-height: 223px;
+    padding: 16px;
+    border-radius: 25px;
+    background: #555 center / cover;
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    .kasa-banner { min-height: 111px; border-radius: 10px; }
+}
