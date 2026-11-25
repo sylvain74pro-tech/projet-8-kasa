@@ -1,3 +1,5 @@
+/* Met en forme la navigation, le logo et le pied de page sur ordinateur et mobile. */
+
 .site-header {
     display: flex;
     align-items: center;

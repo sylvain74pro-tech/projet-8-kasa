@@ -1,0 +1,22 @@
+[
+    {
+        "id": "fiabilite",
+        "title": "Fiabilité",
+        "text": "Les annonces présentent les logements tels qu’ils sont."
+    },
+    {
+        "id": "respect",
+        "title": "Respect",
+        "text": "Chaque échange entre hôtes et voyageurs doit rester respectueux."
+    },
+    {
+        "id": "service",
+        "title": "Service",
+        "text": "Kasa accompagne les hôtes et les voyageurs."
+    },
+    {
+        "id": "securite",
+        "title": "Sécurité",
+        "text": "Kasa veille à la sécurité des séjours."
+    }
+]

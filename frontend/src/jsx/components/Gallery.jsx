@@ -1,3 +1,5 @@
+// Mémorise la photo en cours. Le modulo fait boucler la galerie et les commandes apparaissent à partir de deux photos.
+
 import { useState } from 'react'
 import '../../css/components/Gallery.css'
 
@@ -5,6 +7,7 @@ export default function Gallery({ pictures, title }) {
     const [index, setIndex] = useState(0)
     const count = pictures.length
 
+    // Le modulo permet de revenir à la première photo après la dernière, et inversement.
     function move(step) {
         setIndex((current) => (current + step + count) % count)
     }

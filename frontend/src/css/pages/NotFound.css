@@ -1,3 +1,5 @@
+/* Met en forme le message 404 et le lien de retour à l’accueil. */
+
 .not-found {
     display: grid;
     justify-items: center;

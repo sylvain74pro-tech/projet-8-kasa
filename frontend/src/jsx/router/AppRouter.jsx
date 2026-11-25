@@ -1,3 +1,5 @@
+// Associe les URL aux pages. :id identifie un logement et la route * affiche la page 404 pour les chemins inconnus.
+
 import { Route, Routes } from 'react-router'
 import SiteLayout from '../components/SiteLayout.jsx'
 import Home from '../pages/Home.jsx'

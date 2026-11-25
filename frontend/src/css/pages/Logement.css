@@ -1,3 +1,5 @@
+/* Organise les informations de la fiche et adapte leur disposition sur les petits écrans. */
+
 .logement {
     width: var(--page-width);
     margin: 0 auto;

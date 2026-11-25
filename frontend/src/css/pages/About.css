@@ -1,9 +1,6 @@
-.about { width: var(--page-width); margin: 0 auto; padding-bottom: 38px; }
+/* Espace les panneaux et masque visuellement le titre tout en le laissant accessible. */
 
-.about-banner {
-    background-image: linear-gradient(#0004, #0004),
-        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1440&auto=format&fit=crop");
-}
+.about { width: var(--page-width); margin: 0 auto; padding-bottom: 38px; }
 
 .about-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 

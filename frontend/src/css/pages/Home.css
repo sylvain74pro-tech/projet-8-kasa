@@ -1,12 +1,9 @@
+/* Organise les logements en grille et adapte le nombre de colonnes à la largeur de l’écran. */
+
 .home {
     width: var(--page-width);
     margin: 0 auto;
     padding-bottom: 50px;
-}
-
-.home-banner {
-    background-image: linear-gradient(#0009, #0009),
-        url("https://images.unsplash.com/photo-1510414842594-a61c69bae57?w=1440&auto=format&fit=crop");
 }
 
 .home-banner h1 { margin: 0; font-size: clamp(24px, 4vw, 48px); text-shadow: 0 3px 4px #0008; }

@@ -1,12 +1,19 @@
+// Lit l’identifiant dans l’URL, récupère la fiche depuis l’API et répartit ses données entre les composants.
+
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import Collapse from '../components/Collapse.jsx'
 import Gallery from '../components/Gallery.jsx'
+import LogementTitle from '../components/LogementTitle.jsx'
+import Tags from '../components/Tags.jsx'
+import Host from '../components/Host.jsx'
+import Rating from '../components/Rating.jsx'
 import NotFound from './NotFound.jsx'
 import '../../css/pages/Logement.css'
 
 export default function Logement() {
     const { id } = useParams()
+    // La clé réinitialise la fiche et sa galerie quand on change de logement.
     return <LogementDetails key={id} id={id} />
 }
 
@@ -36,9 +43,11 @@ function LogementDetails({ id }) {
         }
 
         fetchProperty()
+        // Annule la requête si la fiche est quittée avant la réponse.
         return () => controller.abort()
     }, [id])
 
+    // Dans ce cas la route existe, mais l’API ne connaît pas cet identifiant.
     if (result.status === 'missing') return <NotFound />
     if (result.status === 'loading') return <main className="logement"><p role="status">Chargement du logement…</p></main>
     if (result.status === 'error') return <main className="logement"><p role="alert">Impossible de charger le logement.</p></main>
@@ -50,22 +59,12 @@ function LogementDetails({ id }) {
 
             <div className="logement-summary">
                 <div>
-                    <h1>{property.title}</h1>
-                    <p className="logement-location">{property.location}</p>
-                    <ul className="logement-tags" aria-label="Caractéristiques">
-                        {property.tags.map((tag) => <li key={tag}>{tag}</li>)}
-                    </ul>
+                    <LogementTitle title={property.title} location={property.location} />
+                    <Tags tags={property.tags} />
                 </div>
                 <div className="logement-meta">
-                    <div className="logement-host">
-                        <span>{property.host.name}</span>
-                        <img src={property.host.picture} alt="" />
-                    </div>
-                    <div className="logement-rating" role="img" aria-label={`Note : ${property.rating} sur 5`}>
-                        {[1, 2, 3, 4, 5].map((star) => (
-                            <span key={star} aria-hidden="true" className={star <= Number(property.rating) ? 'filled' : ''}>★</span>
-                        ))}
-                    </div>
+                    <Host host={property.host} />
+                    <Rating rating={property.rating} />
                 </div>
             </div>
 

@@ -1,3 +1,5 @@
+/* Superpose le titre et un dégradé à la photo pour améliorer la lisibilité et adapte la carte sur mobile. */
+
 .property-card {
     position: relative;
     display: flex;

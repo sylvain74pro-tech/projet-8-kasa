@@ -1,3 +1,5 @@
+// Affiche le message 404 et fournit un lien pour revenir à l’accueil.
+
 import { Link } from 'react-router'
 import '../../css/pages/NotFound.css'
 

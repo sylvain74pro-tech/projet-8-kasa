@@ -1,11 +1,30 @@
+/* Recadre la photo, règle son assombrissement et adapte la hauteur et les angles sur mobile. */
+
 .kasa-banner {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     display: grid;
     place-items: center;
     min-height: 223px;
     padding: 16px;
     border-radius: 25px;
-    background: #555 center / cover;
+    background: #555;
     color: #fff;
+}
+
+.kasa-banner-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.73);
+}
+
+.home-banner .kasa-banner-image {
+    filter: brightness(0.4);
 }
 
 @media (max-width: 640px) {

@@ -1,3 +1,5 @@
+/* Recadre la photo et positionne les chevrons et le compteur par-dessus. */
+
 .gallery {
     position: relative;
     height: 415px;
